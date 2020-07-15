@@ -126,7 +126,9 @@ def create_snapshots(project):
 
         for v in i.volumes.all():
             if has_pending_snapshot(v):
-                print(" Skipping {0}, snapshot already in progress".format(v.id))
+                print(
+                    " Skipping {0}, snapshot already in progress"
+                    .format(v.id))
                 continue
 
             print("Create snapshit of {0}".format(v.id))
